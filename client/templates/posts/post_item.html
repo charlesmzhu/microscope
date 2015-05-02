@@ -3,6 +3,7 @@
     <div class="post-content">
       <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
     </div>
-    <a href = "{{pathFor postPage}}" class="discuss btn btn-default">Discuss</a>
+    <a href = "{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+    <!--Pretty amazin that we don't need '_id' to route to the right place - this command doesn't refer to any _id. It knows where to go because the use of" ":_id "in naming the route in router.js means that it knows here that any route must have an _id property, so it calls this._id within the context of the current object, or post. To do an explicit call, pass a second argument to the helper {{pathFor 'postPage' someOtherPost}}. someOtherPost would be defined on Template.postItem.helpers({...})-->
   </div>
 </template>
