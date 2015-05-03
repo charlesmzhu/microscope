@@ -3,6 +3,6 @@
     <div class="post-content">
       <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
     </div>
-    <a href = "{{pathFor postPage}}" class="discuss btn btn-default">Discuss</a>
+    <a href = "{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a><!--pathFor 'postPage' automatically gets us to the link for the associated postPage even without passing any kind of id because in the route 'postPage', the first argument had :_id in it so IR assumes that we need an _id and it looks within the context of the current object. Interestingly this object is live! -->
   </div>
 </template>
