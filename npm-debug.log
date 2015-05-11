@@ -1,0 +1,132 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'coffeescript' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 silly cache add args [ 'coffeescript', null ]
+5 verbose cache add spec coffeescript
+6 silly cache add parsed spec { raw: 'coffeescript',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'coffeescript',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed coffeescript@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'coffeescript', range: '*', hasData: false }
+11 silly mapToRegistry name coffeescript
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/coffeescript
+15 verbose addNameRange registry:https://registry.npmjs.org/coffeescript not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/coffeescript
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 4:42:33 PM
+19 verbose request id e955d0a955e4a439
+20 http request GET https://registry.npmjs.org/coffeescript
+21 http 200 https://registry.npmjs.org/coffeescript
+22 silly get cb [ 200,
+22 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly get     etag: '"5NUPLG6Y5EF1A8UGY5M2G8ZDG"',
+22 silly get     'content-type': 'application/json',
+22 silly get     'cache-control': 'max-age=60',
+22 silly get     'content-length': '1522',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     date: 'Mon, 04 May 2015 23:42:34 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     age: '0',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-sjc3125-SJC',
+22 silly get     'x-cache': 'MISS',
+22 silly get     'x-cache-hits': '0',
+22 silly get     'x-timer': 'S1430782954.140982,VS0,VE93',
+22 silly get     vary: 'Accept' } ]
+23 verbose get saving coffeescript to /Users/charlesmzhu/.npm/registry.npmjs.org/coffeescript/.cache.json
+24 silly addNameRange number 2 { name: 'coffeescript', range: '*', hasData: true }
+25 silly addNameRange versions [ 'coffeescript', [ '99.999.9999', '99.999.99999' ] ]
+26 verbose addNamed coffeescript@99.999.99999
+27 silly addNamed semver.valid 99.999.99999
+28 silly addNamed semver.validRange 99.999.99999
+29 warn deprecated coffeescript@99.999.99999: You misspelled 'coffee-script'
+30 silly mapToRegistry name coffeescript
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/coffeescript
+34 verbose addRemoteTarball https://registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz not in flight; adding
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz',
+35 verbose addRemoteTarball   '98f6a60410f827dcb06c067db5539c03c932ad75' ]
+36 info retry fetch attempt 1 at 4:42:33 PM
+37 info attempt registry request try #1 at 4:42:33 PM
+38 http fetch GET https://registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz
+39 http fetch 200 https://registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz
+40 silly fetchAndShaCheck shasum 98f6a60410f827dcb06c067db5539c03c932ad75
+41 verbose addTmpTarball /var/folders/1q/xxk85z6908vcwtr2h9cvdjc80000gn/T/npm-5354-7b9e2b7d/registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz not in flight; adding
+42 verbose addTmpTarball already have metadata; skipping unpack for coffeescript@99.999.99999
+43 silly cache afterAdd coffeescript@99.999.99999
+44 verbose afterAdd /Users/charlesmzhu/.npm/coffeescript/99.999.99999/package/package.json not in flight; writing
+45 verbose afterAdd /Users/charlesmzhu/.npm/coffeescript/99.999.99999/package/package.json written
+46 silly install resolved [ { name: 'coffeescript',
+46 silly install resolved     version: '99.999.99999',
+46 silly install resolved     scripts: { preinstall: 'node super-evil-script-omg-for-reals.js' },
+46 silly install resolved     _id: 'coffeescript@99.999.99999',
+46 silly install resolved     dist:
+46 silly install resolved      { shasum: '98f6a60410f827dcb06c067db5539c03c932ad75',
+46 silly install resolved        tarball: 'http://registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz' },
+46 silly install resolved     _from: 'coffeescript@*',
+46 silly install resolved     _npmVersion: '1.4.4',
+46 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+46 silly install resolved     maintainers: [ [Object] ],
+46 silly install resolved     deprecated: 'You misspelled \'coffee-script\'',
+46 silly install resolved     directories: {},
+46 silly install resolved     _shasum: '98f6a60410f827dcb06c067db5539c03c932ad75',
+46 silly install resolved     _resolved: 'https://registry.npmjs.org/coffeescript/-/coffeescript-99.999.99999.tgz' } ]
+47 info install coffeescript@99.999.99999 into /usr/local/lib
+48 info installOne coffeescript@99.999.99999
+49 verbose installOne of coffeescript to /usr/local/lib not in flight; installing
+50 verbose lock using /Users/charlesmzhu/.npm/_locks/coffeescript-679fe880155c2158.lock for /usr/local/lib/node_modules/coffeescript
+51 silly install write writing coffeescript 99.999.99999 to /usr/local/lib/node_modules/coffeescript
+52 silly cache addNamed cb coffeescript@99.999.99999
+53 verbose unbuild lib/node_modules/coffeescript
+54 silly gentlyRm /usr/local/lib/node_modules/coffeescript is being purged from base /usr/local
+55 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/coffeescript
+56 verbose tar unpack /Users/charlesmzhu/.npm/coffeescript/99.999.99999/package.tgz
+57 verbose tar unpacking to /usr/local/lib/node_modules/coffeescript
+58 silly gentlyRm /usr/local/lib/node_modules/coffeescript is being purged
+59 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/coffeescript
+60 silly gunzTarPerm modes [ '775', '664' ]
+61 error tar.unpack untar error /Users/charlesmzhu/.npm/coffeescript/99.999.99999/package.tgz
+62 verbose unlock done using /Users/charlesmzhu/.npm/_locks/coffeescript-679fe880155c2158.lock for /usr/local/lib/node_modules/coffeescript
+63 verbose fstream_path /usr/local/lib/node_modules/coffeescript
+64 verbose fstream_type Directory
+65 verbose fstream_class DirWriter
+66 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/coffeescript'
+66 verbose stack     at Error (native)
+67 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+67 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+67 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+68 verbose cwd /Users/charlesmzhu/WebApps/microscope
+69 error Darwin 14.3.0
+70 error argv "node" "/usr/local/bin/npm" "install" "-g" "coffeescript"
+71 error node v0.12.2
+72 error npm  v2.7.4
+73 error path /usr/local/lib/node_modules/coffeescript
+74 error code EACCES
+75 error errno -13
+76 error Error: EACCES, mkdir '/usr/local/lib/node_modules/coffeescript'
+76 error     at Error (native)
+76 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/coffeescript']
+76 error   errno: -13,
+76 error   code: 'EACCES',
+76 error   path: '/usr/local/lib/node_modules/coffeescript',
+76 error   fstream_type: 'Directory',
+76 error   fstream_path: '/usr/local/lib/node_modules/coffeescript',
+76 error   fstream_class: 'DirWriter',
+76 error   fstream_stack:
+76 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+76 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+76 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+77 error Please try running this command again as root/Administrator.
+78 verbose exit [ -13, true ]
+79 verbose unbuild lib/node_modules/coffeescript
+80 silly gentlyRm /usr/local/lib/node_modules/coffeescript is being purged from base /usr/local
+81 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/coffeescript

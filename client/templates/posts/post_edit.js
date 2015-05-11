@@ -9,19 +9,29 @@ Template.postEdit.events({
       title: $(e.target).find('[name=title]').val()
     }
 
+    var errors = validatePost(postProperties);
+    if (errors.title || errors.url)
+      return Session.set('postEditErrors', errors);
+
+
     Meteor.call ( 'checkDuplicateUrl', postProperties.url, function ( result ) {
+      
       if ( result ) {
         alert("This url already exists!");
         return; 
       }
 
       Posts.update(currentPostId, {$set: postProperties}, function(error) {
-        if (error) alert(error.reason);
+        if (error) {
+          throwError(error.reason);
+        }
+        
+        Router.go('postPage', {_id: currentPostId}); 
       });
 
-      Router.go('postPage', {_id: currentPostId}); 
-    });
+    })
   },
+
 
   'click .delete': function(e) {
     e.preventDefault();
@@ -31,5 +41,18 @@ Template.postEdit.events({
       Posts.remove(currentPostId);
       Router.go('postsList');
     }
+  }
+});
+
+Template.postEdit.onCreated(function() {
+  Session.set('postEditErrors', {});
+});
+
+Template.postEdit.helpers({
+  errorMessage: function(field) {
+    return Session.get('postEditErrors')[field];
+  },
+  errorClass: function (field) {
+    return !!Session.get('postEditErrors')[field] ? 'has-error' : '';
   }
 });
