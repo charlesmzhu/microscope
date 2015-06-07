@@ -3,10 +3,11 @@
     <div class="post-content">
       <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
       <p>
-      	submitted by {{author}}
-      	{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+        submitted by {{author}},
+        <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
     </div>
-    <a href = "{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a><!--pathFor 'postPage' automatically gets us to the link for the associated postPage even without passing any kind of id because in the route 'postPage', the first argument had :_id in it so IR assumes that we need an _id. It know we need an _id param and looks for_id within the context of the current object. Also, this object is always "living" within the template! -->
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
   </div>
 </template>
