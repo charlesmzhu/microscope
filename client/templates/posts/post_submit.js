@@ -13,11 +13,11 @@ Template.postSubmit.events({
 
 		Meteor.call( 'postInsert', post, function ( error, result ) { //Meteor.call is a special function that allows for a callback on any errors as well as the return of the function
 			if ( error ) {
-				return throwError(error.reason); //read about the error object. Error.reason?
+				return Errors.throw ( error.reason ); //read about the error object. Error.reason?
 			}
 
 			if ( result.postExists ) {
-				throwError('This link has already been posted');
+				Errors.throw('This link has already been posted');
 			}
 
 			Router.go ( 'postPage', { _id: result._id } );
